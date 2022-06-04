@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Footer from '../components/footer'
+import Settings from '../components/settings'
 import styles from '../styles/profile.module.css'
 
 export default function Profile() {
@@ -17,31 +19,7 @@ export default function Profile() {
 
         
         
-        <div id={styles.pleft}>
-            <h5>Settings</h5>
-            <p>
-                <img className={styles.icons} src="/editprofilelogo.svg" alt=" EDIT PROFILE " />
-                <a href='#'>Edit Profile</a>
-            </p>
-            <p>
-                <img className={styles.icons} src="/changepasslogo.svg" alt=" CHANGE PASSWORD " />
-                <a href='#'>Change Password</a>
-            </p>
-            <p>
-                <img className={styles.icons} src="/postsarchivelogo.svg" alt=" POSTS " />
-                <a href='#'>Posts Archive</a>
-            </p>
-            <p>
-                <img className={styles.icons} src="/logoutlogo.svg" alt=" LOGOUT " />
-                <a href='#'>Logout</a>
-            </p>
-            <h5>Other Information</h5>
-            <p>
-                <img className={styles.icons} src="/friends 1.svg" alt=" EDIT PROFILE " />
-                <a href='#'>Number of friends:</a><span> 123</span>
-            </p>
-            <button className={styles.findppl} id='findpplbtn' name='FindPeople'>Find People</button>
-        </div>
+      <Settings/>
 
         <div id={styles.pcentre}>
             <h2 id={styles.pcentre_profilename}>Vaathi Coming</h2>
@@ -59,26 +37,11 @@ export default function Profile() {
                 <img className={styles.basicinfoicons} src="/plannericon.svg" alt=" CAL_INCON " />
                 <span className={styles.basicinfospan}>2001.10.01</span>
             </p>
-
         </div>
       </main>
 
 
-      <footer className={styles.footer}>
-        <div className={styles.footergrid}>
-          <div className={styles.terms}>
-            <span>
-            Terms and Conditions
-            </span>
-          </div>
-
-          <div className={styles.design}>
-            <span>
-              Designed And Developed With Love By NOVUS
-            </span>
-          </div>
-        </div> 
-      </footer>
+      <Footer/>
     </div>
   )
 }

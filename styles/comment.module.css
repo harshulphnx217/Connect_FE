@@ -1,0 +1,16 @@
+.commentContainer{
+    border: 2px solid blue;
+    border-radius: 1.5em;
+    padding: 0.2em;
+    
+    margin: 1.5em;
+    width: 90%;
+   
+}
+
+.profilepic{
+    float: left;
+    width: 6.5%;
+    height: 6.8%;
+    padding: 0.5em;
+}

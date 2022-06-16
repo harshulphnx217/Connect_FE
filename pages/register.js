@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Comment from '../components/comment'
 import Footer from '../components/footer'
 import RegisterForm from '../components/registrationForm'
 import styles from '../styles/register.module.css'
@@ -19,6 +20,7 @@ export default function Register() {
        </main>
 
      <Footer/>
+     {/* <Comment/> */}
     </div>
   )
 }

@@ -20,7 +20,7 @@ export default function Home() {
                 <h2>Login</h2>
                 <input className={styles.inp}type="tel" id='phno' name='Phone Number' placeholder='Phone Number'/>
                 <input className={styles.inp}type="tel" id='pswrd' name='Phone Number' placeholder='Password'/>
-                <a href='forgotPass'>Forgot Password?</a>
+                <a href='forgotPassword'>Forgot Password?</a>
                 <button className={styles.lgnbtn} id='lgnbtn' name='Login'>Login</button>   
                 <button className={styles.regbtn} id='regbtn' name='Register'>Register</button>   
             </form>       

@@ -169,6 +169,11 @@
 
 .verifiedAnimation {
     clear: both; 
-    display:none;
+    /* display:none; */
     
+}
+
+#successAnim{
+    display: none;
+    width: 300px; height: 300px;
 }

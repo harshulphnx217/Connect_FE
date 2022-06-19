@@ -11,6 +11,7 @@ export default function ForgotPass() {
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="icon" href="/favicon.ico" />
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
       </Head>
 
       <main className={styles.main}>
@@ -25,7 +26,7 @@ export default function ForgotPass() {
             </form>       
             <div className={styles.verifiedAnimation}>
             <h2>Verified</h2>
-            <iframe src="https://embed.lottiefiles.com/animation/96673"></iframe>
+            <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_lk80fpsm.json" background="transparent"  speed="1" id={styles.successAnim} loop autoplay></lottie-player>
             
        </div>
         </div>

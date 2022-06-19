@@ -19,6 +19,7 @@ export default function Register() {
        </main>
 
      <Footer/>
+     
     </div>
   )
 }

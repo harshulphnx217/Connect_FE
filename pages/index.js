@@ -1,8 +1,6 @@
 import Head from 'next/head'
-<<<<<<< Updated upstream
 import styles from '../styles/Home.module.css'
 import Footer from '../components/footer'
-=======
 import styles from '../styles/index.module.css'
 import Link from 'next/link';
 import Register from './register';
@@ -49,7 +47,7 @@ export default function Index() {
             alert("Please enter your login details properly")
         }
     }
->>>>>>> Stashed changes
+
 
   return (
 
@@ -64,7 +62,6 @@ export default function Index() {
 
       <main className={styles.main}>
         <div className={styles.grid}>
-<<<<<<< Updated upstream
           <h2 className={styles.card}><img src="/connectlogo.svg" alt=" CONNECT " /></h2>        
           <div className={styles.cardLogin} style={{border: "1px solid blue"}}>
             <form method='post'>
@@ -72,21 +69,10 @@ export default function Index() {
               <input className={styles.inp}type="tel" id='phno' name='Phone Number' placeholder='Phone Number'/>
               <input className={styles.inp}type="tel" id='pswrd' name='Phone Number' placeholder='Password'/>
               <a href='forgotPassword'>Forgot Password?</a>
-              <button className={styles.lgnbtn} id='lgnbtn' name='Login'>Login</button>   
+              <button className={styles.lgnbtn} id='lgnbtn' name='Login' onClick={login}>Login</button>   
             </form>
             <button className={styles.regbtn} id='regbtn' name='Register' onClick={goToRegister}>Register</button>   
           </div>
-=======
-            <h2 className={styles.card}><img src="/connectlogo.svg" alt=" CONNECT " /></h2>        
-            <form className={styles.cardLogin} style={{border: "1px solid blue"}} >
-                <h2>Login</h2>
-                <input className={styles.inp}type="tel" id='phno' name='Phone Number' placeholder='Phone Number'/>
-                <input className={styles.inp}type="password" id='pswrd' name='Phone Number' placeholder='Password'/>
-                <a href='forgotPassword'>Forgot Password?</a>
-                <button className={styles.lgnbtn} id='lgnbtn' name='Login' onClick={login}>Login</button>   
-                <button className={styles.regbtn} id='regbtn' name='Register'><Link href="Register"><a>Register</a></Link></button>   
-            </form>       
->>>>>>> Stashed changes
         </div>
         <Footer/>
       </main>

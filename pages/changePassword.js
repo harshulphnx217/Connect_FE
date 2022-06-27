@@ -18,20 +18,14 @@ export default function ForgotPass() {
         <div className={styles.grid}>
             <h2 className={styles.card}><img src="/connectlogo.svg" alt=" CONNECT " /></h2>        
             <form className={styles.cardLogin} style={{border: "1px solid blue"}} >
-                <h2>Forgot Password</h2>
-                <input className={styles.inp}type="email" id='email' name='mail' placeholder='Email'/>
+                <h2>Change Password</h2>
                 <input className={styles.inp}type="password" id='oldpass' name='oldpass' placeholder='Old Password'/>
                 <input className={styles.inp}type="password" id='confirmOldpass' name='confirmOldpass' placeholder='Confirm Old Password'/>
                 <button className={styles.changePassbtn} id='changePassbtn' name='changePassbtn'>Change Password</button>   
-                  
             </form>       
         </div>
-       
-        
       </main>
       <Footer/>
-
       </div>
-
   )
 }

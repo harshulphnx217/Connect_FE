@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Footer from '../components/footer'
 
 export default function Home() {
   return (
@@ -25,24 +26,8 @@ export default function Home() {
                 <button className={styles.regbtn} id='regbtn' name='Register'>Register</button>   
             </form>       
         </div>
-       
-        
+        <Footer/>
       </main>
-      <footer className={styles.footer}>
-        <div className={styles.footergrid}>
-          <div className={styles.terms}>
-            <span>
-            Terms and Conditions
-            </span>
-          </div>
-
-          <div className={styles.design}>
-            <span>
-              Designed And Developed With Love By NOVUS
-            </span>
-          </div>
-        </div> 
-      </footer>
     </div>
   )
 }

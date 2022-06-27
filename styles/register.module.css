@@ -22,6 +22,9 @@
     padding: 1rem 0;
     border-top: 1px solid #eaeaea;
     background-color: grey;
+    position:fixed;
+    left: 0;
+    bottom: 0;
     
   }
   
@@ -91,7 +94,7 @@
     max-width: 300rem;
   }
   .cardRegister {
-    margin: 8.5rem;
+    margin: 1.5rem;
     margin-left: 30%;
     padding: 2rem;
     text-align: center;

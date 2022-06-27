@@ -12,7 +12,6 @@ export default function Register() {
         last_name: document.getElementById("lname").value,
         phone_number: document.getElementById("phno").value,
         email_address: document.getElementById("email").value,
-        address: document.getElementById("addrs").value,
         country: document.getElementById("country").value,
         password: document.getElementById("pswrd").value,
         confirm_password: document.getElementById("cpswrd").value,
@@ -32,16 +31,14 @@ export default function Register() {
             // Checking if password and confirm password are same
         if(data.password === data.confirm_password){
             formData.append('user_id',data.user_id)
-            formData.append('fname',data.first_name)
-            formData.append('lname',data.last_name)
-            formData.append('phno',data.phone_number)
-            formData.append('email',data.email_address)
-            formData.append('addrs',data.address)
+            formData.append('first_name',data.first_name)
+            formData.append('last_name',data.last_name)
+            formData.append('phone_number',data.phone_number)
+            formData.append('email_address',data.email_address)
             formData.append('country',data.country)
-            formData.append('pswrd',data.password)
-            formData.append('cpswrd',data.confirm_password)
-            formData.append('dob',data.date_of_birth)
-            formData.append('gender',data.gender_field)
+            formData.append('password',data.password)
+            formData.append('date_of_birth',data.date_of_birth)
+            formData.append('gender_field',data.gender_field)
 
             // Hitting the api and getting the response
             fetch("https://connect-api-social.herokuapp.com/user/register", {
@@ -53,7 +50,7 @@ export default function Register() {
                         if (res.status === 201){
                             console.log(res.result)
                             alert(res.result)
-                            window.location.href = '/login'
+                            window.location.href = '/'
                             // TODO:: Render the response in the UI according to the response
                         }
                         else{
@@ -92,10 +89,9 @@ export default function Register() {
                 <h2>Register</h2>
                 <input className={styles.inp}type="text" id='user_id' name='user_id' placeholder='User Id'/>
                 <input className={styles.inp}type="tel" id='phno' name='Phone Number' placeholder='Phone Number'/>
-                <input className={styles.inp}type="text" id='addrs' name='Address' placeholder='Address'/>
                 <input className={styles.inp}type="text" id='fname' name='fname' placeholder='First Name'/>
                 <input className={styles.inp}type="text" id='lname' name='lname' placeholder='Last Name'/>
-                <input className={styles.inp}type="text" id='dob' name='dob' placeholder='Date of Birth (YY-MM-DD)'/>
+                <input className={styles.inp}type="text" id='dob' name='dob' placeholder='Date of Birth (YYYY-MM-DD)'/>
                 <input className={styles.inp}type="text" id='country' name='country' placeholder='Country'/>
                 <input className={styles.inp}type="email" id='email' name='email' placeholder='Email Address'/>
                 <input className={styles.inp}type="text" id='gender' name='gender' placeholder='Gender (M,F,O)'/>
@@ -105,7 +101,7 @@ export default function Register() {
                 <input className={styles.inp}type="password" id='cpswrd' name='Confirm Password' placeholder='Confirm Password'/>
                 <br></br><br></br>
                 <input className={styles.cb}type="checkbox" id='tnc' name='tnc' value='accept'/> 
-                <label for="tnc" id={styles.tncl}>I accept all the Terms and Conditions</label>
+                <label id={styles.tncl}>I accept all the Terms and Conditions</label>
                 <button className={styles.regbtn} id='regbtn' name='Register' onClick={register_user}>Register</button>   
             </form>       
         </div>

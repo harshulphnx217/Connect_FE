@@ -54,7 +54,7 @@ export default function Index() {
 
       <main className={styles.main}>
         <div className={styles.grid}>
-          <h2 className={styles.card}><img src="/connectlogo.svg" alt=" CONNECT " /></h2>        
+          <h1 className={styles.card}><img src="/connectlogo.svg" alt=" CONNECT " /></h1>        
           <div className={styles.cardLogin} style={{border: "1px solid blue"}}>
             <form method='post'>
               <h2>Login</h2>
@@ -64,7 +64,8 @@ export default function Index() {
               <button className={styles.lgnbtn} id='lgnbtn' name='Login' onClick={login}>Login</button>   
             </form>
             <button className={styles.regbtn} id='regbtn' name='Register' onClick={goToRegister}>Register</button>   
-          </div> 
+          </div>
+          
         </div>
         <Footer/>
       </main>

@@ -27,7 +27,7 @@ export default function Index() {
                   // console.log(localStorage.getItem("api_key"))
                   // <Navigate to='/Home'/>     
                   // Redirection to Home Screen on Success Response
-                  window.location.href = '/profile'
+                  window.location.href = '/home'
               }
               else{
                   console.log(res.result)

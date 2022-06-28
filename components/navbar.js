@@ -3,7 +3,7 @@ export default function NavBar(){
     return(
         <div class="navbar" id={styles.nav_bar}>
             <div class="flex-1">
-                <a class="btn btn-square btn-ghost" id={styles.logo}><img src='/connect_nav.png'/></a>
+                <a class="btn btn-square btn-ghost" id={styles.logo} href='/home'><img src='/connect_nav.png'/></a>
             </div>
             <div class="flex-none">
                 <div class="dropdown dropdown-end" id={styles.friends_icon}>
@@ -26,16 +26,19 @@ export default function NavBar(){
                 </label>
                 <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                     <li>
-                    <a class="justify-between">
+                    <a class="justify-between" href='/profile'>
                         Profile
-                        <span class="badge">New</span>
                     </a>
                     </li>
-                    <li><a>Settings</a></li>
-                    <li><a>Logout</a></li>
+                    <li><a onClick={logout}>Logout</a></li>
                 </ul>
                 </div>
             </div>
         </div>
     )
+
+    function logout(){
+        localStorage.clear()
+        window.location.href = "/"
+    }
 }

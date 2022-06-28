@@ -64,8 +64,7 @@ export default function Index() {
               <button className={styles.lgnbtn} id='lgnbtn' name='Login' onClick={login}>Login</button>   
             </form>
             <button className={styles.regbtn} id='regbtn' name='Register' onClick={goToRegister}>Register</button>   
-          </div>
-          <button className={styles.regbtn} id='regbtn' name='Register' onClick={goToProfile}>Profile</button> 
+          </div> 
         </div>
         <Footer/>
       </main>

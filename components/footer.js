@@ -1,7 +1,7 @@
 import styles from '../styles/register.module.css'
 export default function Footer(){
     return(
-        <footer className={styles.footer}>
+        <footer class="footer footer-center p-4 bg-base-200 text-base-content" id={styles.footer}>
         <div className={styles.footergrid}>
           <div className={styles.terms}>
             <span>

@@ -9,7 +9,7 @@ export default function Settings(){
             </p>
             <p>
                 <img className={styles.icons} src="/changepasslogo.svg" alt=" CHANGE PASSWORD " />
-                <a href='#'>Change Password</a>
+                <a onClick={chngPswrd}>Change Password</a>
             </p>
             <p>
                 <img className={styles.icons} src="/postsarchivelogo.svg" alt=" POSTS " />
@@ -17,7 +17,7 @@ export default function Settings(){
             </p>
             <p>
                 <img className={styles.icons} src="/logoutlogo.svg" alt=" LOGOUT " />
-                <a href='#'>Logout</a>
+                <a onClick={logout}>Logout</a>
             </p>
             <h5>Other Information</h5>
             <p>
@@ -27,4 +27,14 @@ export default function Settings(){
             <button className={styles.findppl} id='findpplbtn' name='FindPeople'>Find People</button>
         </div>
     )
+    
+}
+function logout(){
+    localStorage.clear()
+    window.location.href = "/"
+}
+
+function chngPswrd(){
+    window.location.href = '/changePassword'
+
 }

@@ -60,18 +60,25 @@ export default function Index() {
               <h2>Login</h2>
               <input className={styles.inp}type="tel" id='phno' name='Phone Number' placeholder='Phone Number'/>
               <input className={styles.inp}type="password" id='pswrd' name='Phone Number' placeholder='Password'/>
-              <a href='forgotPassword'>Forgot Password?</a>
+              <a onClick={forgotPassword}>Forgot Password?</a>
               <button className={styles.lgnbtn} id='lgnbtn' name='Login' onClick={login}>Login</button>   
             </form>
             <button className={styles.regbtn} id='regbtn' name='Register' onClick={goToRegister}>Register</button>   
           </div>
+          <button className={styles.regbtn} id='regbtn' name='Register' onClick={goToProfile}>Profile</button> 
         </div>
         <Footer/>
       </main>
     </div>
   )
 }
-
+function forgotPassword(){
+  window.location.href = '/forgotPassword'
+}
 function goToRegister(){
   window.location.href = '/register'
+}
+
+function goToProfile(){
+  window.location.href = '/profile'
 }

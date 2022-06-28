@@ -1,5 +1,6 @@
 import styles from '../styles/navbar.module.css'
 export default function NavBar(){
+    get_profile_pic()
     return(
         <div class="navbar" id={styles.nav_bar}>
             <div class="flex-1">
@@ -21,7 +22,7 @@ export default function NavBar(){
                 <div class="dropdown dropdown-end">
                 <label tabindex="0" class="btn btn-ghost btn-circle avatar">
                     <div class="w-10 rounded-full">
-                    <img src="https://api.lorem.space/image/face?hash=33791" />
+                    <img id='profile_logo'/>
                     </div>
                 </label>
                 <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
@@ -41,4 +42,40 @@ export default function NavBar(){
         localStorage.clear()
         window.location.href = "/"
     }
+
+    function get_profile_pic() {
+        if (typeof window !== 'undefined') {
+            console.log('You are on the browser')
+            // 👉️ can use localStorage here
+            const data = {
+                api_key: localStorage.getItem("api_key")
+              }
+              const formData = new FormData();
+              formData.append("api_key", data.api_key)
+            
+              fetch("https://connect-api-social.herokuapp.com/user/fetch-personal-profile", {
+                method: "POST",
+                body: formData
+              })
+                .then(res => res.json())
+                .then(res => {
+                  console.log(res)
+                  if (res.status === 200) {
+                    console.log(res.result)
+                    if (res.result.profile_pic !== '') {
+                      document.getElementById("profile_logo").src = res.result.profile_pic
+                    }
+                    else if(res.result.profile_pic === ''){
+                      document.getElementById("profile_logo").src = "https://res.cloudinary.com/dapmlabyx/image/upload/v1642256152/media/profile/test_pic_e8s7ee.jpg";
+                    }
+                  }else{
+                      document.getElementById("profile_logo").src = "https://res.cloudinary.com/dapmlabyx/image/upload/v1642256152/media/profile/test_pic_e8s7ee.jpg";
+                  }
+                })
+                .catch(err => console.log(err));
+          } else {
+            console.log('You are on the server')
+          }
+      
+      }
 }

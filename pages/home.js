@@ -7,6 +7,7 @@ export default function Home(){
         <main>
             <NavBar/>
             <Post/>
+            <Post/>
             <Footer/>
         </main>
     )

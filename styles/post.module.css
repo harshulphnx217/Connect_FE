@@ -1,0 +1,57 @@
+.postContainer{
+    border: 2px solid blue;
+    border-radius: 4rem;
+    padding: 2rem;
+    /* display: flex; */
+    overflow: auto;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.postLeft{
+    float: left;
+}
+
+.profilepic{
+    float: left;
+    width: 12%;
+    height: 6.8%;
+    padding: 0.5em;
+}
+
+.postHeading{
+    margin-top: 2em;
+    background-color: bisque;
+    width: 70%;
+    height: 0.5em;
+    margin-left: 10em;
+    padding: 2em;
+    text-align: center;
+}
+
+.postpic{
+    margin-left: 10em;
+    margin-top: 0.5em;
+    width: 70%;
+}
+
+.commentBtn{
+    float: right;
+    margin-right: 10%;
+    margin-top: 2.5%;
+}
+
+.likeBtn{
+    margin-left: 25%;
+    margin-top: 2.5%;
+}
+
+.postDescription{
+   float: right;
+   background-color: bisque;
+   height:20em;
+   min-width: 30%;
+   text-align: center;
+   margin-top: 5%;
+}
+

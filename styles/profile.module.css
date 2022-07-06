@@ -2,7 +2,7 @@
   .logocard img{
     display: block;
     margin:auto;
-    align:center;
+    align-items:center;
     
 }
 
@@ -71,12 +71,17 @@
 
 .pcentre h2{
     text-align:center;
-    margin: auto;
+    margin-left:35rem ;
 }
 
 .profilepic{
+  
+  align-items:center ;
     display:block;
     margin: auto;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
 }
 
 .basicinfo{

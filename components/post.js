@@ -13,7 +13,6 @@ export default function Post(){
              <input className={styles.commentBtn}type="image" id='commentBtn' name='commentBtn' src="/commentBtn.svg"/>   
              {/* <p className={styles.commentBtn}>100</p> */}
             </div>
-
             <p className={styles.postDescription}>Post Description</p>
         </div>
     )
